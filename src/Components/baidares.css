@@ -1,0 +1,135 @@
+/* baidares.css */
+.baidares-container {
+  width: 100%;
+  /* height: calc(150vh - 80px);  */
+  /* Full height minus navbar height */
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  justify-content: start;
+  /* padding-top: 80px; */
+}
+
+.background-video2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire area */
+  z-index: -1; /* Ensure the video is behind other content */
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Adjust text color as needed */
+  text-align: center;
+  z-index: 1; /* Ensure content is above the video */
+}
+
+.blocks-container {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 0px;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 1;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.block {
+  background-color: rgba(209, 241, 179, 0.7); /* Light green background */
+  padding: 20px; /*Aplinkui koks margin*/
+  border-radius: 10px;
+  text-align: center;
+  color: #3a492c; /* Dark green text */
+}
+
+.block img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.block h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-family: 'DM Serif Text', serif;
+}
+
+.block p {
+  margin: 10px 0;
+  font-size: 1rem;
+  font-family: 'DM Serif Text', serif;
+}
+
+.block button {
+  background-color: #3a492c;
+  color: rgba(209, 241, 179, 0.7);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'DM Serif Text', serif;
+}
+
+.block button:hover {
+  background-color: #7EA172;
+}
+
+@media (min-width: 768px) {
+  .blocks-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Adjust gap between blocks */
+  }
+}
+
+@media (min-width: 1024px) {
+  .blocks-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; /* Adjust gap between blocks */
+    padding: 40px; /* Adjust padding for larger screens */
+  }
+}
+
+@media (max-width: 767px) {
+  .baidares-container {
+    justify-content: center; /*nezinau ar reikia*/
+    background-color: white; /* White background on smaller screens */
+    /* height: calc(270vh - 80px); */
+    height: auto;
+    justify-content: start;
+    
+  }
+
+  .background-video {
+    display: none; /* Hide video on smaller screens */
+  }
+
+  .blocks-container {
+    gap: 20px;
+    margin-top: 20px; 
+  }
+
+  .block {
+    background-color: rgba(209, 241, 179, 0.7); /* Light grey background for blocks on smaller screens */
+    color: #3a492c; /* Dark green text */
+  }
+
+  .block button {
+    background-color: #3a492c;
+    color: white; /* Adjust button color */
+  }
+}
+
+
+

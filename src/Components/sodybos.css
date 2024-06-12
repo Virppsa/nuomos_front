@@ -1,0 +1,101 @@
+/* sodybos.css */
+.sodybos-container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px); /* Full height minus navbar height */
+    /* background-color: rgba(255, 255, 255, 0); */
+  }
+  
+  .sodybos-sidebar {
+    width: 25%;
+    padding: 20px;
+    position: relative;
+    background-color: rgba(209, 241, 179, 0.746); /* Light green background */
+  }
+  
+  .background-video3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire area */
+    z-index: -1; /* Ensure the video is behind other content */
+  }
+  
+  .button-box {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 0; /* Ensure buttons are above the video */
+  }
+  
+  .sodybos-sidebar h2 {
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-family: 'DM Serif Text', serif;
+    color: #3a492c; /* Dark green text */
+  }
+  
+  .trail-button {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left:5%;
+    background-color: rgba(209, 241, 179, 0.7); /* Light green background */
+    border: none;
+    border-radius: 5px;
+    font-family: 'DM Serif Text', serif;
+    color: #3a492c; /* Dark green text */
+    cursor: pointer;
+  }
+  
+  .trail-button:hover,
+  .trail-button.active {
+    background-color: #7EA172; /* Darker green on hover and active */
+  }
+  
+  .sodybos-content {
+    width: 75%;
+    padding: 20px;
+    background-color: rgba(209, 241, 179, 0.7); /* Light green background */
+  }
+  
+  .trail-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .sodybos-content h3 {
+    font-family: 'DM Serif Text', serif;
+    color: #3a492c; /* Dark green text */
+  }
+  
+  .sodybos-content p {
+    font-family: 'DM Serif Text', serif;
+    color: #3a492c; /* Dark green text */
+  }
+  
+  @media (max-width: 767px) {
+    .sodybos-container {
+      flex-direction: column;
+    }
+  
+    .sodybos-sidebar {
+      width: 100%;
+      height: auto;
+      padding: 20px 0;
+    }
+  
+    .sodybos-content {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .background-video {
+      display: none;
+    }
+  }
+  
